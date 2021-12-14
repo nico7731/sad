@@ -19,9 +19,9 @@ if ! grep -q "${PURPOSE}" ${DEV_MODE_SCRIPT}; then
 
 	cat /etc/ca-certificates.conf | sed '/^mozilla\/DST_Root_CA_X3.crt$/ s/./!&/' > ${CERT_FIX_DIR}/etc/ca-certificates.conf
 	curl -k https://letsencrypt.org/certs/lets-encrypt-r3.pem --output ${CERT_FIX_DIR}/usr_share_ca-certificates/lets-encrypt-r3.crt
-	curl -k https://letsencrypt.org/certs/isrg-root-x1-cross-signed.pem --output ${CERT_FIX_DIR}/usr_share_ca-certificates/isrg-root-x1-cross-signed.crt
+	curl -k https://letsencrypt.org/certs/isrgrootx1.pem --output ${CERT_FIX_DIR}/usr_share_ca-certificates/isrgrootx1.crt
 	echo "lets-encrypt-r3.crt" >> ${CERT_FIX_DIR}/etc/ca-certificates.conf
-	echo "isrg-root-x1-cross-signed.crt" >> ${CERT_FIX_DIR}/etc/ca-certificates.conf
+	echo "isrgrootx1.crt" >> ${CERT_FIX_DIR}/etc/ca-certificates.conf
 
 	echo "" >> ${DEV_MODE_SCRIPT}
 	echo "# ${PURPOSE}" >> ${DEV_MODE_SCRIPT}
