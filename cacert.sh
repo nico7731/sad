@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Explicitly remove the old expired X3 certificate from the trust store
 # Download two new LetsEncrypt certificates
