@@ -4,7 +4,6 @@
 # Download two new LetsEncrypt certificates
 # Update the start-devmode.sh script to overlay this data over the readonly filesystem and reload CA cert config on boot
 # Tam Oct 2021
-
 export PURPOSE="Overlay our custom CA certificate configuration (to replace outdated CA certs) and update trust store"
 
 export DEV_MODE_SCRIPT=/media/cryptofs/apps/usr/palm/services/com.palmdts.devmode.service/start-devmode.sh
